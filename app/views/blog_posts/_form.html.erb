@@ -1,0 +1,21 @@
+<%= form_with model: @blog_post do |form| %> 
+    <%# Use form.object instead of blog_post.error in case the blog_post object changes %>
+    <% if form.object.errors.any? %>
+        <div>
+            <% form.object.errors.full_messages.each do |msg| %>
+                <div><%= msg %></div>
+            <% end %>
+        <div>
+    <% end %>
+    <div>
+        <%= form.label :title %>
+        <%= form.text_field :title %>
+    </div>
+
+    <div>
+        <%= form.label :body %>
+        <%= form.text_area :body %>
+    </div>
+
+    <%= form.button %>
+<% end %>
