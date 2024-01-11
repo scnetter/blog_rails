@@ -3,8 +3,9 @@
     <% @blog_posts.each do |blog_post| %>
     <%# <h2><%= link_to blog_post.title, blog_post_path(blog_post) %>
     <%# Because Rails will infer, you can just pass the blog_post to the link_to instead of the full blog_post_path with arg %>
-    <h2><%= link_to blog_post.title, blog_post %></h2>
+    <h3><%= link_to blog_post.title, blog_post %></3>
     <%# Do not need to explicitly pass blog_post.id as rails will infer from the item passed %>
     <p><%= blog_post.body %></h2>
     <% end %>
 </div>
+<%= link_to "Create New Post", new_blog_post_path %>
