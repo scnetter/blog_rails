@@ -1,6 +1,6 @@
 class BlogPostsController < ApplicationController
 
-  before_action :set_blog_post, except: [:index, :new, :create]
+  before_action :set_blog_post, except: [:index, :new, :create] # only: [:show, :edit, :update, :destroy]
 
   def index
     @blog_posts = BlogPost.all
